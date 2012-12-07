@@ -321,9 +321,9 @@
               <xs:element name="state_id" type="xs:integer" />
               <xs:element name="name" type="xs:string" />
               <xs:element minOccurs="0" name="partial_identification" type="partialIdType" />
-              <xs:element minOccurs="0" maxOccurrs="unbounded" name="category" type="idCategoryEnum" />
-	            <xs:element minOccurs="0" maxOccurrs="unbounded" name="ruleset_id" type="idRuleSetEnum" />
-              <xs:element minOccurs="0" maxOccurrs="unbounded" name="id_requirement" type="idRequirementsEnum" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="category" type="idCategoryEnum" />
+	            <xs:element minOccurs="0" maxOccurs="unbounded" name="ruleset_id" type="idRuleSetEnum" />
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="id_requirement" type="idRequirementsEnum" />
             </xs:all>
             <xs:attribute name="id" type="xs:integer" use="required" />
             <xs:attribute name="verified" type="yesNoEnum" />
@@ -331,32 +331,32 @@
         </xs:element>
 
 	<xs:element name="voter_id_rules">
-	  <xs:complexType>
-	      <xs:all>
-	            <xs:element name="state_id" type="xs:integer" />
-		          <xs:element name="question" type="xs:string" />
-			        <xs:element name="response" type="xs:string" />
-				      <xs:element name="citation" type="citationType" />
-				          </xs:all>
+	    <xs:complexType>
+	          <xs:all>
+		          <xs:element name="state_id" type="xs:integer" />
+			        <xs:element name="question" type="xs:string" />
+				      <xs:element name="response" type="xs:string" />
+				            <xs:element name="citation" type="citationType" />
+		  </xs:all>
             <xs:attribute name="id" type="xs:integer" use="required" />
             <xs:attribute name="verified" type="yesNoEnum" />
-	      </xs:complexType>
-	      </xs:element>
+	    </xs:complexType>
+	</xs:element>
 
-	      <xs:element name="election_rules">
-	        <xs:complexType>
-		    <xs:all>
+	<xs:element name="election_rules">
+	    <xs:complexType>
+	          <xs:all>
 		          <xs:element name="state_id" type="xs:integer" />
 			        <xs:element name="topic" type="rulesTopicEnum" />
 				      <xs:element name="question" type="xs:string" />
 				            <xs:element name="response" type="xs:string" />
 					          <xs:element name="citation" type="citationType" />
-						      </xs:all>
+		  </xs:all>
             <xs:attribute name="id" type="xs:integer" use="required" />
             <xs:attribute name="verified" type="yesNoEnum" />
-	      </xs:complexType>
-	      </xs:element>
-	      <!-- /END Rules of the Road -->
+	    </xs:complexType>
+	</xs:element>
+	<!-- /END Rules of the Road -->
 
       </xs:choice>
       <xs:attribute fixed="4.0" name="schemaVersion" type="xs:decimal" use="required" />
@@ -402,7 +402,7 @@
   <xs:complexType name="votesWithCertification">
     <xs:simpleContent>
       <xs:extension base="xs:integer">
-      <xs:attribute name="certification" type="certificationEnum" />
+	<xs:attribute name="certification" type="certificationEnum" />
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -479,7 +479,7 @@
 
   <xs:simpleType name="idRequirementsEnum">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="AD" />"
+      <xs:enumeration value="AD" />
       <xs:enumeration value="ADC" />
       <xs:enumeration value="ADS" />
       <xs:enumeration value="ADSORPART" />
